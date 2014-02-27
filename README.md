@@ -1,4 +1,4 @@
-Grid
+Murray
 ========
 
-Very simple framework for creating a grid.
+It's a shop.
