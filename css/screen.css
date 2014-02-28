@@ -124,6 +124,10 @@ h2 {
   border-bottom: 3px dashed black;
 }
 
+.actions {
+  border-bottom: 3px dashed black;
+  margin-bottom: 12px;
+}
 .actions li {
   display: inline-block;
   font-size: 13px;
