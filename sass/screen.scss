@@ -26,7 +26,7 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
 // Global tags
 
 body {
-    background: #51C6C5;
+    background: lighten(#51C6C5,20%);
     font-family: Helvetica;
     padding-top: 2em;
 }
