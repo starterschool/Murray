@@ -96,6 +96,7 @@ a {
 .wrap {
   margin: 0 20px;
   font-size: 0;
+  position: relative;
 }
 
 nav {
@@ -105,6 +106,12 @@ nav {
   margin-right: 20px;
   display: inline-block;
   vertical-align: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+nav.stuck {
+  position: fixed;
 }
 nav a {
   display: block;
@@ -155,12 +162,13 @@ nav a.active:after {
 }
 
 .store {
+  margin-left: 245.0px;
   width: 715px;
   margin-right: 20px;
+  margin-right: 0;
   padding-top: 20px;
   display: inline-block;
   font-size: 0;
-  margin-right: 0;
   position: relative;
 }
 
