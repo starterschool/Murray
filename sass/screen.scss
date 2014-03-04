@@ -86,8 +86,24 @@ $nav_border: fade-out(black,.9);
             text-transform: uppercase;
             font-size: 14px;
             color: fade-out(black, .5);
+
+            span {
+                position: relative;
+                padding-right: 16px;
+
+                &:after {
+                    @include arrow-down(fade-out(black, .5), 5px);
+                    right: 0;
+                    top: 6px;
+                }
+            }
         }
     }
+}
+
+.vontrapps .vontrapps a {
+    background:fade-out(white,.7);
+    color: #333;
 }
 
 .wrapwrap {
