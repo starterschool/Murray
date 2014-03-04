@@ -98,18 +98,18 @@ a {
   font-size: 0;
   border-right: rgba(0, 0, 0, 0.1);
 }
-.topnav ul > li {
+.topnav > ul > li {
   font-size: 16px;
   display: inline-block;
   position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-.topnav ul > li:first-child {
+.topnav > ul > li:first-child {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
-.topnav ul > li > a {
-  width: 166px;
+.topnav > ul > li > a {
+  width: 165px;
   margin-right: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
   display: block;
   padding: .8em 1em;
   text-align: center;
@@ -119,11 +119,11 @@ a {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
-.topnav ul > li > a span {
+.topnav > ul > li > a span {
   position: relative;
   padding-right: 16px;
 }
-.topnav ul > li > a span:after {
+.topnav > ul > li > a span:after {
   content: "";
   position: absolute;
   height: 0;
@@ -134,20 +134,37 @@ a {
   right: 0;
   top: 6px;
 }
-.topnav ul > li:hover .subnav {
+.topnav > ul > li:hover > a {
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.3);
+}
+.topnav > ul > li:hover .subnav {
   display: block;
 }
-.topnav ul > li .subnav {
+.topnav .subnav {
+  width: 100%;
   display: none;
   position: absolute;
   z-index: 100;
   background: white;
   top: 100%;
   left: 0;
+  margin-top: 1px;
+  border-radius: 1px solid black;
+}
+.topnav .subnav a {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  padding: .5em .8em;
+  border-bottom: 1px solid #f0f0f0;
+}
+.topnav .subnav a:hover {
+  background: #f7f7f7;
 }
 
 .vontrapps .vontrapps a {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   color: #333;
 }
 

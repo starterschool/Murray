@@ -66,19 +66,19 @@ $nav_border: fade-out(black,.9);
     font-size: 0;
     border-right: $nav_border;
 
-    ul > li {
+    > ul > li {
         font-size: 16px;
         display: inline-block;
         position: relative;
+        border-right: 1px solid $nav_border;
 
         &:first-child {
             border-left: 1px solid $nav_border;
         }
 
         > a {
-            width: floor(($wrap_width - 1) / 6);
+            width: floor(($wrap_width - 7) / 6);
             margin-right: 0;
-            border-right: 1px solid $nav_border;
             display: block;
             padding: .8em 1em;
             text-align: center;
@@ -102,24 +102,44 @@ $nav_border: fade-out(black,.9);
         }
 
         &:hover {
+            > a {
+                color: fade-out(black,.2);
+                background:fade-out(white,.7);
+            }
+
             .subnav {
                 display: block;
             }
         }
+    }
 
-        .subnav {
-            display: none;
-            position: absolute;
-            z-index: 100;
-            background:white;
-            top: 100%;
-            left: 0;
+    .subnav {
+        width: 100%;
+        display: none;
+        position: absolute;
+        z-index: 100;
+        background: white;
+        top: 100%;
+        left: 0;
+        margin-top: 1px;
+        border-radius: 1px solid black;
+
+        a {
+            display: block;
+            text-align: left;
+            text-decoration: none;
+            padding: .5em .8em;
+            border-bottom: 1px solid #f0f0f0;
+
+            &:hover {
+                background:#f7f7f7;
+            }
         }
     }
 }
 
 .vontrapps .vontrapps a {
-    background:fade-out(white,.7);
+    background:fade-out(white,.5);
     color: #333;
 }
 
