@@ -14,15 +14,18 @@
 %container {
     margin: 0 auto;
     width: $max_width;
-    // background:#bbb;
+}
+
+%container-wrap {
+    margin: 0 auto;
+    width: $wrap_width;
 }
 
 // Global tags
 
 body {
     background: lighten(#51C6C5,20%);
-    font-family: Helvetica;
-    padding-top: 2em;
+    font-family: Lato, Helvetica;
 }
 
 a {
@@ -51,9 +54,44 @@ a {
     }
 }
 
+$nav_border: fade-out(black,.9);
+
+.navwrap {
+    border-bottom: 1px solid $nav_border;
+    margin-bottom: 2em;
+}
+
+.topnav {
+    @extend %container-wrap;
+    font-size: 0;
+    border-right: $nav_border;
+
+    li {
+        font-size: 16px;
+        display: inline-block;
+
+        &:first-child {
+            border-left: 1px solid $nav_border;
+        }
+
+        a {
+            width: floor(($wrap_width - 1) / 6);
+            margin-right: 0;
+            border-right: 1px solid $nav_border;
+            display: block;
+            padding: .8em 1em;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: fade-out(black, .5);
+        }
+    }
+}
+
 .wrapwrap {
-    @extend %container;
-    width: $max_width + 40px;
+    @extend %container-wrap;
     background: white url(/img/bg.gif) repeat-y;
     border-radius: 10px;
     box-shadow: 0 0 5px fade-out(black,.7);
@@ -140,10 +178,11 @@ a {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 42px;
     line-height: 1;
-    margin-bottom: .8em;
+    margin-bottom: .6em;
     padding: 12px 0;
+    font-weight: bold;
 }
 
 .actions {
