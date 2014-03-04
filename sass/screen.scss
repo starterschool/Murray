@@ -123,6 +123,7 @@ $nav_border: fade-out(black,.9);
         left: 0;
         margin-top: 1px;
         border-radius: 1px solid black;
+        box-shadow: 0 0 3px fade-out(black,.8);
 
         a {
             display: block;
