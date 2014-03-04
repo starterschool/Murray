@@ -66,15 +66,16 @@ $nav_border: fade-out(black,.9);
     font-size: 0;
     border-right: $nav_border;
 
-    li {
+    ul > li {
         font-size: 16px;
         display: inline-block;
+        position: relative;
 
         &:first-child {
             border-left: 1px solid $nav_border;
         }
 
-        a {
+        > a {
             width: floor(($wrap_width - 1) / 6);
             margin-right: 0;
             border-right: 1px solid $nav_border;
@@ -97,6 +98,22 @@ $nav_border: fade-out(black,.9);
                     top: 6px;
                 }
             }
+
+        }
+
+        &:hover {
+            .subnav {
+                display: block;
+            }
+        }
+
+        .subnav {
+            display: none;
+            position: absolute;
+            z-index: 100;
+            background:white;
+            top: 100%;
+            left: 0;
         }
     }
 }

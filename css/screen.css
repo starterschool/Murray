@@ -98,14 +98,15 @@ a {
   font-size: 0;
   border-right: rgba(0, 0, 0, 0.1);
 }
-.topnav li {
+.topnav ul > li {
   font-size: 16px;
   display: inline-block;
+  position: relative;
 }
-.topnav li:first-child {
+.topnav ul > li:first-child {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
-.topnav li a {
+.topnav ul > li > a {
   width: 166px;
   margin-right: 0;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -118,11 +119,11 @@ a {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
-.topnav li a span {
+.topnav ul > li > a span {
   position: relative;
   padding-right: 16px;
 }
-.topnav li a span:after {
+.topnav ul > li > a span:after {
   content: "";
   position: absolute;
   height: 0;
@@ -132,6 +133,17 @@ a {
   border-width: 5px;
   right: 0;
   top: 6px;
+}
+.topnav ul > li:hover .subnav {
+  display: block;
+}
+.topnav ul > li .subnav {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  background: white;
+  top: 100%;
+  left: 0;
 }
 
 .vontrapps .vontrapps a {
