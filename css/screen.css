@@ -99,7 +99,7 @@ a {
   position: relative;
 }
 
-nav {
+.sidenav {
   font-size: 0;
   margin-bottom: 20px;
   width: 225px;
@@ -110,10 +110,10 @@ nav {
   top: 0;
   left: 0;
 }
-nav.stuck {
+.sidenav.stuck {
   position: fixed;
 }
-nav a {
+.sidenav a {
   display: block;
   background: #111;
   color: #ddd;
@@ -125,7 +125,7 @@ nav a {
   padding-left: 44px;
   opacity: .7;
 }
-nav a:before {
+.sidenav a:before {
   content: "";
   width: 30px;
   height: 30px;
@@ -137,18 +137,18 @@ nav a:before {
   background: #dddddd url(http://www.fillmurray.com/31/31);
   border: 1px solid #444;
 }
-nav a.active {
+.sidenav a.active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-weight: bold;
   opacity: 1;
 }
-nav a.active + a {
+.sidenav a.active + a {
   border: none;
 }
-nav a.active:before {
+.sidenav a.active:before {
   border-color: #aaa;
 }
-nav a.active:after {
+.sidenav a.active:after {
   content: "";
   position: absolute;
   height: 0;

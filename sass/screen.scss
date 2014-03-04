@@ -67,7 +67,7 @@ a {
     position: relative;
 }
 
-nav {
+.sidenav {
     font-size: 0;
     margin-bottom: 20px;
     @include columnify(3);

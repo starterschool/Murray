@@ -5,7 +5,7 @@ $(function () {
     });
 
     // Make left nav sticky
-    var nav = $('nav');
+    var nav = $('.sidenav');
     var navTop = nav.offset().top;
     var navLeft = nav.offset().left;
     $(window).scroll(function() {
